@@ -15,7 +15,7 @@ public class Criteria {
 	private int amount;	 // 한 페이지당 데이터의 갯수
 	
 	private String type;	// 검색 조건
-	private String keyword;	// 검색ㅋ ㅣ워드
+	private String keyword;	// 검색 키워드
 	
 	public Criteria() {
 		this(1, 10);
