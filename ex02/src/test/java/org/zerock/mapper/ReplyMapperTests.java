@@ -45,7 +45,7 @@ public class ReplyMapperTests {
 	
 	@Test
 	public void testRead() {
-		int targetRno = 5;
+		Long targetRno = 5L;
 		
 		ReplyVO vo = mapper.read(targetRno);
 		
@@ -54,7 +54,7 @@ public class ReplyMapperTests {
 	
 	@Test
 	public void testDelete() {
-		int targetRno = 2;
+		Long targetRno = 2L;
 		
 		int num = mapper.delete(targetRno);
 		
@@ -67,7 +67,7 @@ public class ReplyMapperTests {
 	
 	@Test
 	public void testUpdate() {
-		int targetRno = 10;
+		Long targetRno = 10L;
 		ReplyVO vo = mapper.read(targetRno);
 		
 		vo.setReply("Update Reply...");
