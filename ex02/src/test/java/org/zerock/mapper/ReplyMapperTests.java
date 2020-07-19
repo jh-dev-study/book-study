@@ -21,12 +21,12 @@ public class ReplyMapperTests {
 	
 	private Long[] bnoArr = {3145728L, 3145727L, 3145726L, 3145725L, 3145724L};
 	
-	@Setter(onMethod_ = @Autowired)
+	@Autowired
 	private ReplyMapper mapper;
 	
 	@Test
 	public void testMapper() {
-		log.info("-----------------------" + mapper);
+		log.info("-----------------------" + mapper.delete(bnoArr[1]));
 	}
 	
 	@Test
