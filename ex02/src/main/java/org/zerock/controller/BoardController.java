@@ -18,11 +18,11 @@ import lombok.extern.log4j.Log4j;
 
 
 /**
- * @author ÁÖÇö
- * - @Controller: ½ºÇÁ¸µÀÇ ºóÀ¸·Î ÀÎ½ÄÇÒ ¼ö ÀÖµµ·Ï ¼³Á¤
- * - @RequestMapping: '/board'·Î ½ÃÀÛÇÏ´Â ¸ðµç Ã³¸®¸¦ ÇØ´ç Å¬·¡½º°¡ ´ã´ç.
- * - @Log4j: ·Î±×¸¦ ±â·ÏÇÒ ¼ö ÀÖ´Â ¾î³ëÅ×ÀÌ¼Ç
- * - @AllArgsConstructor: ¸ðµç Å¬·¡½ºº¯¼ö¸¦ ¸Å°³º¯¼ö·Î °®´Â »ý¼ºÀÚ¸¦ ¸¸µé¾îÁÜ.
+ * @author ì£¼í˜„
+ * - @Controller: ìŠ¤í”„ë§ì˜ ë¹ˆìœ¼ë¡œ ì¸ì‹í•  ìˆ˜ ìžˆë„ë¡ ì„¤ì •
+ * - @RequestMapping: '/board'ë¡œ ì‹œìž‘í•˜ëŠ” ëª¨ë“  ì²˜ë¦¬ë¥¼ í•´ë‹¹ í´ëž˜ìŠ¤ê°€ ë‹´ë‹¹.
+ * - @Log4j: ë¡œê·¸ë¥¼ ê¸°ë¡í•  ìˆ˜ ìžˆëŠ” ì–´ë…¸í…Œì´ì…˜
+ * - @AllArgsConstructor: ëª¨ë“  í´ëž˜ìŠ¤ë³€ìˆ˜ë¥¼ ë§¤ê°œë³€ìˆ˜ë¡œ ê°–ëŠ” ìƒì„±ìžë¥¼ ë§Œë“¤ì–´ì¤Œ.
  * 
  */
 @Controller	
@@ -33,7 +33,7 @@ public class BoardController {
 	
 	private BoardService service;
 	
-//	// Get¹æ½Ä, '/board/list'·Î ¿Â URLÀ» Ã³¸®ÇÏ´Â ¸Þ¼Òµå.
+//	// Getë°©ì‹, '/board/list'ë¡œ ì˜¨ URLì„ ì²˜ë¦¬í•˜ëŠ” ë©”ì†Œë“œ.
 //	@GetMapping("/list")
 //	public void list(Model model) {
 //		log.info("list....");
@@ -53,14 +53,14 @@ public class BoardController {
 		model.addAttribute("pageMaker", new PageDTO(cri, total));
 	}
 	
-	// Post¹æ½Ä, '/board/register' ·Î ¿Â URL Ã³¸®
+	// Postë°©ì‹, '/board/register' ë¡œ ì˜¨ URL ì²˜ë¦¬
 	@PostMapping("/register")
 	public String register(BoardVO board, RedirectAttributes rttr) {
 		log.info("register: " + board);
 		
 		service.register(board);
 		
-		// URL ÁÖ¼ÒÃ¢¿¡ --> result=board.getBno
+		// URL ì£¼ì†Œì°½ì— --> result=board.getBno
 		rttr.addFlashAttribute("result", board.getBno());
 		//rttr.addAttribute("result", board.getBno());
 		

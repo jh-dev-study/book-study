@@ -7,15 +7,15 @@ import lombok.ToString;
 @ToString
 public class PageDTO {
 	
-	private int startPage; // ÆäÀÌÁöÀÇ ½ÃÀÛ ¹øÈ£
-	private int endPage;   // ÆäÀÌÁöÀÇ ³¡ ¹øÈ£
-	private boolean prev;  // ÀÌÀü
-	private boolean next;  // ´ÙÀ½
+	private int startPage; // í˜ì´ì§€ì˜ ì‹œì‘ ë²ˆí˜¸
+	private int endPage;   // í˜ì´ì§€ì˜ ë ë²ˆí˜¸
+	private boolean prev;  // ì´ì „
+	private boolean next;  // ë‹¤ìŒ
 	
-	private int total;	// ÀüÃ¼ µ¥ÀÌÅÍ ¼ö
+	private int total;	// ì „ì²´ ë°ì´í„° ìˆ˜
 	private Criteria cri;
 	
-	// ±³Àç 304~305p È®ÀÎ!!
+	// êµì¬ 304~305p í™•ì¸!!
 	public PageDTO(Criteria cri, int total) {
 		this.cri = cri;
 		this.total = total;

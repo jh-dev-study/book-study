@@ -35,7 +35,7 @@ public class ReplyMapperTests {
 			ReplyVO vo = new ReplyVO();
 			
 			vo.setBno(bnoArr[i%5]);
-			vo.setReply("´ñ±Û Å×½ºÆ® " + i);
+			vo.setReply("ëŒ“ê¸€ í…ŒìŠ¤íŠ¸ " + i);
 			vo.setReplyer("replyer " + i);
 			
 			log.info("testCreate.............. vo " + vo);
@@ -59,9 +59,9 @@ public class ReplyMapperTests {
 		int num = mapper.delete(targetRno);
 		
 		if(num == 0) {
-			log.info("testDelete ½ÇÆÐ .............");
+			log.info("testDelete ì‹¤íŒ¨ .............");
 		} else if(num == 1) {
-			log.info("testDelete ¼º°ø ............." + num);
+			log.info("testDelete ì„±ê³µ ............." + num);
 		}
 	}
 	

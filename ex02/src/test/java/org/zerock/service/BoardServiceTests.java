@@ -30,12 +30,12 @@ public class BoardServiceTests {
 	@Test
 	public void testRegister() {
 		BoardVO board = new BoardVO();
-		board.setTitle("»õ·Î ÀÛ¼ºÇÏ´Â±Û");
-		board.setContent("»õ·Î ÀÛ¼ºÇÏ´Â ³»¿ë");
+		board.setTitle("ì œëª© ë“±ë¡");
+		board.setContent("ë‚´ìš© ë“±ë¡");
 		board.setWriter("newbie");
 		
 		service.register(board);
-		log.info("»ı¼ºµÈ °Ô½Ã¹°ÀÇ ¹øÈ£: " + board.getBno());
+		log.info("testRegister ... board.getBno(): " + board.getBno());
 	}
 	
 	@Test
@@ -62,8 +62,8 @@ public class BoardServiceTests {
 		if(board == null) {
 			return;
 		}
-		board.setTitle("Á¦¸ñ ¼öÁ¤.");
-		board.setContent("³»¿ë ¼öÁ¤...");
+		board.setTitle("ì œëª© ìˆ˜ì •í•©ë‹ˆë‹¤...");
+		board.setContent("ë‚´ìš© ìˆ˜ì •í•©ë‹ˆë‹¤...");
 		log.info("modify........." + service.modify(board));
 	}
 

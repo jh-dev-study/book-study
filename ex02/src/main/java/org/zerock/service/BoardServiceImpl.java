@@ -14,7 +14,7 @@ import lombok.extern.log4j.Log4j;
 
 
 @Log4j
-@Service	// ºñÁî´Ï½º ¿µ¿ªÀ» ´ã´çÇÏ´Â °´Ã¼ÀÓÀ» Ç¥½Ã.
+@Service	// ë¹„ì¦ˆë‹ˆìŠ¤ ì˜ì—­ì„ ë‹´ë‹¹í•˜ëŠ” ê°ì²´ì„ì„ í‘œì‹œ.
 @AllArgsConstructor
 public class BoardServiceImpl implements BoardService {
 	

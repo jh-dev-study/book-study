@@ -46,8 +46,8 @@ public class BoardControllerTests {
 	@Test
 	public void testRegister() throws Exception {
 		String resultPage = mockMvc.perform(MockMvcRequestBuilders.post("/board/register")
-					.param("title", "Å×½ºÆ® »õ±Û Á¦¸ñ")
-					.param("content", "Å×½ºÆ® »õ±Û ³»¿ë")
+					.param("title", "í…ŒìŠ¤íŠ¸ ìƒˆê¸€ ì œëª©")
+					.param("content", "í…ŒìŠ¤íŠ¸ ìƒˆê¸€ ë‚´ìš©")
 					.param("writer", "user00")
 				).andReturn().getModelAndView().getViewName();
 		
@@ -65,8 +65,8 @@ public class BoardControllerTests {
 	public void testModify() throws Exception {
 
 		String resultPage = mockMvc
-				.perform(MockMvcRequestBuilders.post("/board/modify").param("bno", "15").param("title", "¼öÁ¤µÈ Å×½ºÆ® »õ±Û Á¦¸ñ")
-						.param("content", "¼öÁ¤µÈ Å×½ºÆ® »õ±Û ³»¿ë").param("writer", "user00"))
+				.perform(MockMvcRequestBuilders.post("/board/modify").param("bno", "15").param("title", "ìˆ˜ì •ëœ í…ŒìŠ¤íŠ¸ ìƒˆê¸€ ì œëª©")
+						.param("content", "ìˆ˜ì •ëœ í…ŒìŠ¤íŠ¸ ìƒˆê¸€ ë‚´ìš©").param("writer", "user00"))
 				.andReturn().getModelAndView().getViewName();
 
 		log.info(resultPage);
@@ -75,7 +75,7 @@ public class BoardControllerTests {
 
 	@Test
 	public void testRemove() throws Exception {
-		// »èÁ¦Àü µ¥ÀÌÅÍº£ÀÌ½º¿¡ °Ô½Ã¹° ¹øÈ£ È®ÀÎÇÒ °Í
+		// ì‚­ì œì „ ë°ì´í„°ë² ì´ìŠ¤ì— ê²Œì‹œë¬¼ ë²ˆí˜¸ í™•ì¸í•  ê²ƒ
 		String resultPage = mockMvc.perform(MockMvcRequestBuilders.post("/board/remove").param("bno", "15")).andReturn()
 				.getModelAndView().getViewName();
 

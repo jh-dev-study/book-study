@@ -10,25 +10,25 @@ public interface BoardMapper {
 	//@Select("SELECT * FROM tbl_board WHERE bno > 0")
 	public List<BoardVO> getList();
 	
-	// INSERT¸¸ ½ÇÇà
+	// INSERTë§Œ ì‹¤í–‰
 	public void insert(BoardVO board);
 	
-	// INSERT ½ÇÇà ÈÄ »ı¼ºµÈ PK°ªµµ ¾Ë¾Æ¾ß ÇÏ´Â °æ¿ì
+	// INSERT ì‹¤í–‰ í›„ ìƒì„±ëœ PKê°’ë„ ì•Œì•„ì•¼ í•˜ëŠ” ê²½ìš°
 	public void insertSelectKey(BoardVO board);
 	
-	// READ(SELECT) Ã³¸®
+	// READ(SELECT) ì²˜ë¦¬
 	public BoardVO read(Long bno);
 	
-	// DELETE Ã³¸®
+	// DELETE ì²˜ë¦¬
 	public int delete(Long bno);
 	
-	// UPDATE Ã³¸®
+	// UPDATE ì²˜ë¦¬
 	public int update(BoardVO board);
 	
-	// ÆäÀÌÂ¡ Ã³¸®
+	// í˜ì´ì§• ì²˜ë¦¬
 	public List<BoardVO> getListWithPaging(Criteria cri);
 	
-	// ÀüÃ¼ µ¥ÀÌÅÍ °¹¼ö Á¶È¸
+	// ì „ì²´ ë°ì´í„° ê°¯ìˆ˜ ì¡°íšŒ
 	public int getTotalCount(Criteria cri);
 	
 }

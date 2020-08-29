@@ -11,11 +11,11 @@ import lombok.ToString;
 @ToString
 public class Criteria {
 	
-	private int pageNum; // ÆäÀÌÁö ¹øÈ£
-	private int amount;	 // ÇÑ ÆäÀÌÁö´ç µ¥ÀÌÅÍÀÇ °¹¼ö
+	private int pageNum; // í˜ì´ì§€ ë²ˆí˜¸
+	private int amount;	 // í•œ í˜ì´ì§€ë‹¹ ë°ì´í„°ì˜ ê°¯ìˆ˜
 	
-	private String type;	// °Ë»ö Á¶°Ç
-	private String keyword;	// °Ë»ö Å°¿öµå
+	private String type;	// ê²€ìƒ‰ ì¡°ê±´
+	private String keyword;	// ê²€ìƒ‰ í‚¤ì›Œë“œ
 	
 	public Criteria() {
 		this(1, 10);
@@ -30,7 +30,7 @@ public class Criteria {
 		return type == null ? new String[] {} : type.split("");
 	}
 	
-	/* URL ¸µÅ© »ı¼º */
+	/* URL ë§í¬ ìƒì„± */
 	public String getListLink() {
 		UriComponentsBuilder builder = UriComponentsBuilder.fromPath("")
 				.queryParam("pageNum", this.pageNum)
