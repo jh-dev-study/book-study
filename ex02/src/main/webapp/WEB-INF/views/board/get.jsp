@@ -2,7 +2,7 @@
   pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
-<%@include file="../includes/header.jsp"%>
+<%@ include file="../includes/header.jsp"%>
 
 
 <div class="row">
@@ -64,9 +64,19 @@
 </div>
 <!-- /.row -->
 
+<script type="text/javascript" src="/resources/js/reply.js"></script>
 
 <script type="text/javascript">
 	$(document).ready(function(){
+		
+		console.log("==============");
+		var bnoValue = '<c:out value="${board.bno}"/>';
+		
+		replyService.add(
+			{reply:"JS Test", replyer:"tester", bno:bnoValue},
+			function(result){
+				alert("RESULT: " + result);
+			});
 		
 		var operForm = $("#operForm");
 		
