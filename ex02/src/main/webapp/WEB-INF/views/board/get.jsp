@@ -71,12 +71,41 @@
 		
 		console.log("==============");
 		var bnoValue = '<c:out value="${board.bno}"/>';
+		console.log("bnoValue: " + bnoValue);
+		
 		
 		replyService.add(
 			{reply:"JS Test", replyer:"tester", bno:bnoValue},
 			function(result){
 				alert("RESULT: " + result);
 			});
+		
+		replyService.getList({bno:bnoValue, page:1}, function(list){
+			for(var i=0, len=list.length||0; i<len; i++){
+				console.log(list[i]);
+			}
+		});
+		
+		replyService.remove(51, function(count) {
+			console.log("count: " + count);
+			
+			if(count === "success") {
+				alert("REMOVED");
+			}
+		}, function(err) {
+			alert("ERROR...");
+		});
+		
+		replyService.update(
+				{rno: 22, bno: bnoValue, reply: "Modify !!!"}, 
+				function(result) {
+			alert("수정 완료...");
+		});
+		
+		replyService.get(22, function(data) {
+			console.log(data);
+		});
+		
 		
 		var operForm = $("#operForm");
 		
