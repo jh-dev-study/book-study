@@ -23,7 +23,6 @@ import lombok.extern.log4j.Log4j;
  * - @RequestMapping: '/board'로 시작하는 모든 처리를 해당 클래스가 담당.
  * - @Log4j: 로그를 기록할 수 있는 어노테이션
  * - @AllArgsConstructor: 모든 클래스변수를 매개변수로 갖는 생성자를 만들어줌.
- * 
  */
 @Controller	
 @Log4j

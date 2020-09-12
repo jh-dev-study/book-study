@@ -13,6 +13,7 @@
 </div>
 <!-- /.row -->
 
+<!-- 게시글 목록 -->
 <div class="row">
   <div class="col-lg-12">
     <div class="panel panel-default">
@@ -64,17 +65,68 @@
 </div>
 <!-- /.row -->
 
+
+<!-- 댓글 목록 -->
+<div class='row'>
+	<div class="col-lg-12">
+	
+		<!-- /.panel -->
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<i class="fa fa-comments fa-fw"></i>Reply
+			</div>
+			
+			<!-- /.panel-heading -->
+			<div class="panel-body">
+				<ul class="chat">
+				
+					<!-- start reply -->
+					<li class="left clearfix" data-rno='12'>
+					<div>
+						<div class="header">
+							<strong class="primary-font">user00</strong>
+							<small class="pull-right text-muted">2020-09-12 23:40</small>
+						</div>
+						<p>Good Job!</p>
+					</div>
+				</ul>	<!-- end reply -->
+			</div>	<!-- ./ end ul -->
+		</div>	<!-- ./panel .chat-panel -->
+	</div>
+</div>	<!-- ./ end row -->
+
 <script type="text/javascript" src="/resources/js/reply.js"></script>
 
 <script type="text/javascript">
 	$(document).ready(function(){
 		
-		console.log("==============");
+		// 댓글 목록 가져오기 추가
 		var bnoValue = '<c:out value="${board.bno}"/>';
+		var replyUL = $(".chat");
+		
 		console.log("bnoValue: " + bnoValue);
+		console.log("replyUL: " + replyUL);
 		
+		showList(1);
 		
-		replyService.add(
+		function showList(page){
+			replyService.getList({bno:bnoValue,page: page|| 1}, function(list){
+				var str = "";
+				if(list == null || list.length == 0){
+					replyUL.html("");
+					return;
+				}
+				for(var i=0, len=list.length || 0; i<len; i++){
+					str += "<li class='left clearfix' data-rno='"+list[i].rno+"'>";
+					str += "  <div><div class='header'><strong class='primary-font'>"+list[i].replyer+"</strong>";
+					str += "    <small class='pull-right text-muted'>"+replyService.displayTime(list[i].replyDate)+"</small></div>";
+					str += "    <p>"+list[i].reply+"</p></div></li>";
+				}
+				replyUL.html(str);
+			});
+		}
+		
+/* 		replyService.add(
 			{reply:"JS Test", replyer:"tester", bno:bnoValue},
 			function(result){
 				alert("RESULT: " + result);
@@ -105,7 +157,7 @@
 		replyService.get(22, function(data) {
 			console.log(data);
 		});
-		
+		 */
 		
 		var operForm = $("#operForm");
 		
