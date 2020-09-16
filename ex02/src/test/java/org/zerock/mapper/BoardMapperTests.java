@@ -50,6 +50,7 @@ public class BoardMapperTests {
 		log.info(board);
 	}
 	
+	
 	@Test
 	public void testRead() {
 		
