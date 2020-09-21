@@ -9,6 +9,7 @@ import java.util.List;
 
 public class BankStatementAnalyzer {
 	private static final String RESOURCES = "src/main/resources/";
+	//private static final BankStatementCSVParser bankStatementParser = new BankStatementCSVParser();
 	
 	public void analyze(final String fileName, final BankStatementParser bankStatementParser) throws IOException {
 		final Path path = Paths.get(RESOURCES + fileName);
@@ -17,12 +18,11 @@ public class BankStatementAnalyzer {
 		final List<BankTransaction> bankTransactions = 
 				bankStatementParser.parseLinesFromCSV(lines);
 		
-		final BankStatementProcessor bankStatementProcessor = 
-				new BankStatementProcessor(bankTransactions);
+		final BankStatementProcessor bankStatementProcessor = new BankStatementProcessor(bankTransactions);
 		
 		collectSummary(bankStatementProcessor);
 	}
-	private static final BankStatementCSVParser bankStatementParser = new BankStatementCSVParser();
+	
 	
 	public static void main(String[] args) throws IOException {
 //		final String fileName = args[0];
