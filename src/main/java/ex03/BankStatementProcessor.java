@@ -32,6 +32,7 @@ public class BankStatementProcessor {
 		return bankTransactionsInMonth;
 	}
 	
+	/* 특정 카테고리에 해당하는 금액 총합 */
 	public double calculateTotalForCategory(final String category) {
 		double total = 0;
 		for(BankTransaction bankTransaction: bankTransactions) {
@@ -69,7 +70,6 @@ public class BankStatementProcessor {
 	/* 특정 월이나 특정 금액으로 입출금 내역 검색 */
 	public List<BankTransaction> findTransactionsInMonthAndGreater(final Month month, final int amount) {
 		final List<BankTransaction> result = new ArrayList<>();
-		
 		for(final BankTransaction bankTransaction : bankTransactions) {
 			if(bankTransaction.getDate().getMonth() == month && bankTransaction.getAmount() >= amount) {
 				result.add(bankTransaction);
