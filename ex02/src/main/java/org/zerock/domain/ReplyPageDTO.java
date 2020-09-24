@@ -14,5 +14,4 @@ public class ReplyPageDTO {
 	private int replyCnt;
 	private List<ReplyVO> list;
 	
-	
 }
