@@ -6,8 +6,9 @@ public class BankTransactionIsInFebruaryAndExpensive implements BankTransactionF
 
 	@Override
 	public boolean test(BankTransaction bankTransaction) {
-		return bankTransaction.getDate().getMonth() == Month.FEBRUARY 
+		return bankTransaction.getDate().getMonth() == Month.FEBRUARY
 				&& bankTransaction.getAmount() >= 1000;
 	}
+
 	
 }
