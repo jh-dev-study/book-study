@@ -6,6 +6,8 @@
   
   - [`스프링 부트와 AWS로 혼자 구현하는 웹 서비스`](https://github.com/jh-dev-study/book-study/tree/main/springboot-aws-webservice)
 
-  - [`Jpub 객체지향 사고 프로세스`](http://m.yes24.com/Goods/Detail/90688759)
+  - [`Jpub 객체지향 사고 프로세스`](https://github.com/jh-dev-study/book-study/tree/main/object-oriented-thinking-process)
+
+  - [`Jpub 자바 기반의 마이크로서비스 이해와 아키텍처 구축하기`](https://github.com/jh-dev-study/book-study/tree/main/understanding-java-based-msa)
 
 
