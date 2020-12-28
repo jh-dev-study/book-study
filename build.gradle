@@ -37,7 +37,7 @@ dependencies {
 
     // 소셜 로그인 등 클라이언트 입장에서 소셜 기능 구현 시 필요한 의존성
     implementation('org.springframework.boot:spring-boot-starter-oauth2-client')
-    //implementation('org.springframework.session:spring-session-jdbc')
+    implementation('org.springframework.session:spring-session-jdbc')
 
     testImplementation('org.springframework.boot:spring-boot-starter-test')
     //testImplementation("org.springframework.security:spring-security-test")
