@@ -1,5 +1,5 @@
 # object-oriented-thinking-process
-[Jpub] [`객체지향 사고 프로세스`]
+[`Jpub 객체지향 사고 프로세스`]
 <br><br>
 
 ## 차례  
@@ -17,4 +17,4 @@
   - (12) 객체지향 설계의 SOLID 원칙
 
 
-[`객체지향 사고 프로세스`]: http://m.yes24.com/Goods/Detail/90688759
+[`Jpub 객체지향 사고 프로세스`]: http://m.yes24.com/Goods/Detail/90688759
