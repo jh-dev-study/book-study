@@ -1,8 +1,12 @@
 # object-oriented-thinking-process
 [`Jpub 객체지향 사고 프로세스`]
+
+![객체지향 사고 프로세스](https://user-images.githubusercontent.com/50076031/105569675-f574b780-5d86-11eb-82e6-9ce4575518ba.jpg)
+
+
 <br><br>
 
-## 차례  
+## 목차  
   - (1) 객체지향 개념 소개
   - (2) 객체라는 관점에서 생각하는 방법
   - (3) 그 밖의 객체지향 개념들
