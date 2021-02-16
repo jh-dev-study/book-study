@@ -20,7 +20,8 @@ class EnumEx {
 }
 
 ```
-    
+
+<br>
 
 ```java
 import java.util.EnumMap;
@@ -64,6 +65,7 @@ public class Plant {
     }
 }
 ```
+<br>
 
 <img width="630" alt="캡처 10" src="https://user-images.githubusercontent.com/50076031/108075525-d0394780-70ad-11eb-9af0-c286bb85a81e.PNG">
 
@@ -91,6 +93,8 @@ public EnumMap(EnumMap<K, ? extends V> m)
 
 public EnumMap(Map<K, ? extends V> m)
 ```
+
+<br>
 
 ```java
 package other;
