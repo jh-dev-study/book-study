@@ -10,4 +10,5 @@
 
   - [`Jpub 자바 기반의 마이크로서비스 이해와 아키텍처 구축하기`](https://github.com/jh-dev-study/book-study/tree/main/understanding-java-based-msa)
 
+  - [`Jpub 자바 개발자를 위한 97가지 제안`](https://github.com/jh-dev-study/book-study/tree/main/%EC%9E%90%EB%B0%94%20%EA%B0%9C%EB%B0%9C%EC%9E%90%EB%A5%BC%20%EC%9C%84%ED%95%9C%2097%EA%B0%80%EC%A7%80%20%EC%A0%9C%EC%95%88)
 
