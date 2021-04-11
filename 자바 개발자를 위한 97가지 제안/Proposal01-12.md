@@ -84,7 +84,6 @@ assertEquals("", functionCall())
 
 <br>
 
-## PROPOSAL 07 ~ PROPOSAL 12
 
 ### 07 아키텍처의 품질을 체계화하고 검증하는 방법의 장점 (다니엘 브라이언트) 
   - 애플리케이션의 아키텍처 품질을 코드화하고 강제하는 가장 중요한 곳은 지속적 전달(CD, Continuous Delivery) 빌드 파이프라인이다.
