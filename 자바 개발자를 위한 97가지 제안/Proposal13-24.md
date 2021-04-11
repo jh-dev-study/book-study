@@ -150,6 +150,7 @@ GROUP BY c.id
   - 넷플릭스의 성능 엔지니어가 개발한 불꽃 그래프(flame graphs, https://oreil.ly/2kCDd) 를 활용해보자.
   - 불꽃 그래프는 프로그램의 전반적인 성능 특성을 쉽게 확인할 수 있는 매우 강력한 도구다.
  
+<br><br>
  
 ### References
   - [`자바 개발자를 위한 97가지 제안`](http://www.yes24.com/Product/Goods/96036230)
